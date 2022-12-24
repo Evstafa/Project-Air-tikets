@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
-        long tiket = 4000; // стоимости билета
-        int miles = 20; // количество рублей для одной бонусной мили
-        int i = (int) tiket / miles;
-        System.out.println("Количество бонусных миль: " + i + " руб.");
+        BonusMilesService service = new BonusMilesService();
+        int price = 10_000;
+        int miles = service.calculate(price);
+        System.out.println(miles);
     }
 }
